@@ -1,0 +1,10 @@
+<resources>
+    <!-- NoActionBar: each screen adds its own Toolbar (set as the ActionBar in code) -->
+    <style name="Theme.PayCalculator" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">#1E5BAA</item>
+        <item name="colorPrimaryVariant">#123C73</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="colorSecondary">#1E5BAA</item>
+        <item name="colorOnSecondary">#FFFFFF</item>
+    </style>
+</resources>

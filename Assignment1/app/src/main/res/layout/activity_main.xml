@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- App bar: AppBarLayout + Toolbar, used as the ActionBar via setSupportActionBar() -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- ===== INPUT ===== -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_hours">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etHours"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:hint="@string/hint_rate">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etRate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:hint="@string/hint_tax">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etTax"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionDone"
+                android:inputType="numberDecimal" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btnCalculate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/btn_calculate" />
+
+        <!-- ===== OUTPUT ===== -->
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:stretchColumns="1">
+
+            <TableRow android:paddingTop="6dp" android:paddingBottom="6dp">
+                <TextView android:text="@string/label_pay" android:textSize="18sp" />
+                <TextView
+                    android:id="@+id/tvPay"
+                    android:freezesText="true"
+                    android:gravity="end"
+                    android:text="@string/empty_value"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </TableRow>
+
+            <TableRow android:paddingTop="6dp" android:paddingBottom="6dp">
+                <TextView android:text="@string/label_overtime" android:textSize="18sp" />
+                <TextView
+                    android:id="@+id/tvOvertime"
+                    android:freezesText="true"
+                    android:gravity="end"
+                    android:text="@string/empty_value"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </TableRow>
+
+            <TableRow android:paddingTop="6dp" android:paddingBottom="6dp">
+                <TextView android:text="@string/label_total" android:textSize="18sp" />
+                <TextView
+                    android:id="@+id/tvTotal"
+                    android:freezesText="true"
+                    android:gravity="end"
+                    android:text="@string/empty_value"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </TableRow>
+
+            <TableRow android:paddingTop="6dp" android:paddingBottom="6dp">
+                <TextView android:text="@string/label_tax" android:textSize="18sp" />
+                <TextView
+                    android:id="@+id/tvTax"
+                    android:freezesText="true"
+                    android:gravity="end"
+                    android:text="@string/empty_value"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>

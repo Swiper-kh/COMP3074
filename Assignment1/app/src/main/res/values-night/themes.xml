@@ -1,0 +1,9 @@
+<resources>
+    <style name="Theme.PayCalculator" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">#8AB4F8</item>
+        <item name="colorPrimaryVariant">#1E5BAA</item>
+        <item name="colorOnPrimary">#000000</item>
+        <item name="colorSecondary">#8AB4F8</item>
+        <item name="colorOnSecondary">#000000</item>
+    </style>
+</resources>
